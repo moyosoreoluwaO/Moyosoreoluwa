@@ -1,0 +1,366 @@
+
+/* Resposnive Author Name */
+.Name{
+        font-size:5.5vw;
+      }
+
+      .SlideTitle{
+              font-size:3vw;
+              text-align: center;
+              font-family: Brush Script MT, Brush Script Std, cursive;
+              color: #8E294D;
+
+            }
+
+/* Responsive Sizing */
+      *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+
+  body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    background: #ffffff;
+  }
+
+/* Headings */
+.title1 { color:#8E294D;
+
+  height: 30px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 20px
+}
+
+/* unvisited link */
+a:link {
+  color: :#8E294D;
+
+}
+
+/* mouse over link */
+a:hover {
+  color: :#ACBED7;
+  opacity: 0.85;
+}
+
+/* Portfolio Content "Tabs"*/
+  .comic {border-radius: 100%
+  }
+
+/* Vertical Timeline */
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #8E294D;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+  }
+
+  .container {
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+  }
+
+  .container.left {
+    left: 0;
+  }
+
+  .container.right {
+    left: 50%;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background: #ffffff;
+    border: 2px solid #FAA300;
+    border-radius: 16px;
+    z-index: 1;
+  }
+
+  .container.right::after {
+    left: -8px;
+  }
+
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 8px;
+    background: #8E294D;
+    z-index: 1;
+  }
+
+  .container.right::before {
+    left: 8px;
+  }
+
+/* Timeline Dates */
+  .container .date {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 8px);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ACBED7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+  }
+
+  .container.left .date {
+    right: -75px;
+  }
+
+  .container.right .date {
+    left: -75px;
+  }
+
+/* Timeline Circles */
+  .container .icon {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 9px 0;
+    top: calc(50% - 20px);
+    background: #8E294D;
+    border: 2px solid #8E294D;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    z-index: 1;
+  }
+
+  .container.left .icon {
+    right: 56px;
+  }
+
+  .container.right .icon {
+    left: 56px;
+  }
+
+  .container .content {
+    padding: 30px 90px 30px 30px;
+    background: #FAA300;
+    position: relative;
+    border-radius: 500px 1000px 1500px 300px/300px 1500px 100px 5000px;
+  }
+
+  .container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 1000px 1500px 300px/300px 1500px 100px 5000px;
+  }
+
+  .container .content h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: #8E294D;
+  }
+
+  .container .content p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  @media (max-width: 767.98px) {
+
+    .timeline::after {
+      left: 90px;
+
+
+    }
+
+    .container {
+      width: 100%;
+      padding-left: 120px;
+      padding-right: 30px;
+    }
+
+    .container.right {
+      left: 0%;
+    }
+
+    .container.left::after,
+    .container.right::after {
+      left: 82px;
+    }
+
+    .container.left::before,
+    .container.right::before {
+      left: 100px;
+      border-color: transparent #006E51 transparent transparent;
+    }
+
+    .container.left .date,
+    .container.right .date {
+      right: auto;
+      left: 15px;
+    }
+
+    .container.left .icon,
+    .container.right .icon {
+      right: auto;
+      left: 146px;
+    }
+
+    .container.left .content,
+    .container.right .content {
+      padding: 30px 30px 30px 90px;
+      border-radius: 500px 0 0 500px;
+    }
+  }
+
+/* SlideShow */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.containerS {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+/* About and Contact */
+  * {
+    box-sizing: border-box;
+  }
+
+  .Feedback {
+    background-color: #8E294D;
+
+    padding: 20px;
+    float: left;
+    width: 20%;
+    text-align: center;
+    color: #FFFFFF /* The width is 20%, by default */
+
+  }
+
+  .About {
+    background-color: #ffffff;
+    padding: 20px;
+    float: left;
+    width: 60%;
+    text-align: center;
+    /* The width is 60%, by default */
+  }
+
+  .Call {
+    background-color: #FAA300;
+    padding: 20px;
+    float: left;
+    width: 20%;
+    text-align: center;
+    color: #FFFFFF/* The width is 20%, by default */
+  }
